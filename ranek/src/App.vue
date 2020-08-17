@@ -1,11 +1,17 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>|
-    </div>
-    <router-view/>
+    <TheHeader />
+    <router-view />
+    <TheFooter />
   </div>
 </template>
 
-<style>
-</style>
+<script>
+export default {
+  components: {
+    TheHeader,
+    TheFooter,
+  },
+};
+</script>
+<style></style>
