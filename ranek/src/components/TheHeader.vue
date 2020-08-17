@@ -1,8 +1,18 @@
 <template>
-  <!-- refactor(compoments): TheHeader
-add(compoments): TheHeader
-  rm(compoments): TheHeader-->
-  <p>Header</p>
+  <!-- 
+    refactor(compoments): TheHeader
+    add(compoments): TheHeader
+    rm(compoments): TheHeader
+  -->
+
+  <header>
+    <nav>
+      <router-link to="/" class="logo">
+        <img src="@/assets/ranek.svg" alt="Ranek" />
+      </router-link>
+      <router-link class="btn" to="/login">Vender / Login</router-link>
+    </nav>
+  </header>
 </template>
 
 <script>
