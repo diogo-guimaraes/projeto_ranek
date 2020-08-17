@@ -1,12 +1,14 @@
 <template>
   <!-- 
-    refactor(compoments): App
-    add(compoments): App
-    rm(compoments): App
+    refactor(view): App
+    add(view): App
+    rm(view): App
   -->
   <div id="app">
     <TheHeader />
-    <router-view />
+    <main id="main">
+      <router-view />
+    </main>
     <TheFooter />
   </div>
 </template>
