@@ -1,4 +1,9 @@
 <template>
+  <!-- 
+    refactor(compoments): Home
+    add(compoments): Home
+    rm(compoments): Home
+  -->
   <div></div>
 </template>
 
