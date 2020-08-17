@@ -4,11 +4,31 @@
     add(compoments): ProdutosLista
     rm(compoments): ProdutosLista
   -->
-  <div></div>
+  <div>
+    {{ produtos }}
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      produtos: null,
+    };
+  },
+  methods: {
+    getProdutos() {
+      fetch("http://localhost:3000/produto")
+        .then((response) => response.json())
+        .then((response) => {
+          this.produtos = response;
+        });
+    },
+  },
+  created() {
+    this.getProdutos();
+  },
+};
 </script>
 
 <style scoped></style>
