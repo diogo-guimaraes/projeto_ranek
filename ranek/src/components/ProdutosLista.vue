@@ -5,8 +5,9 @@
     rm(compoments): ProdutosLista
   -->
   <section class="produtos-container">
+    {{produtosTotal}}
     <div v-if="produtos && produtos.length" class="produtos">
-      <div class="produto" v-for="produto in produtos" :key="produto.id">
+      <div class="produto" v-for="(produto, index) in produtos" :key="index">
         <router-link to="/">
           <img v-if="produto.fotos" :src="produto.fotos[0].src" :alt="produto.fotos[0].titulo" />
           <p class="preco">{{ produto.preco }}</p>
@@ -29,6 +30,7 @@ export default {
     return {
       produtos: null,
       produtosPorPagina: 9,
+      produtosTotal: 0,
     };
   },
 
@@ -43,6 +45,7 @@ export default {
     // faz um fech na api e apresenta os dados quando ativado a primeira vez
     getProdutos() {
       api.get(this.url).then((response) => {
+        this.produtosTotal = Number(response.headers["x-total-count"]);
         this.produtos = response.data;
       });
     },
