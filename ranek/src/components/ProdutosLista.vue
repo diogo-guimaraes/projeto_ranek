@@ -5,14 +5,13 @@
     rm(compoments): ProdutosLista
   -->
   <section class="produtos-container">
-    {{produtosTotal}}
     <div v-if="produtos && produtos.length" class="produtos">
       <div class="produto" v-for="(produto, index) in produtos" :key="index">
         <router-link to="/">
           <img v-if="produto.fotos" :src="produto.fotos[0].src" :alt="produto.fotos[0].titulo" />
-          <p class="preco">{{ produto.preco }}</p>
-          <h2 class="titulo">{{ produto.nome }}</h2>
-          <p>{{ produto.descricao }}</p>
+          <p class="preco">{{produto.preco}}</p>
+          <h2 class="titulo">{{produto.nome}}</h2>
+          <p>{{produto.descricao}}</p>
         </router-link>
       </div>
       <ProdutosPaginar :produtosTotal="produtosTotal" :produtosPorPagina="produtosPorPagina" />
@@ -35,7 +34,7 @@ export default {
   data() {
     return {
       produtos: null,
-      produtosPorPagina: 9,
+      produtosPorPagina: 6,
       produtosTotal: 0,
     };
   },
