@@ -5,9 +5,12 @@
     rm(compoments): ProdutosPaginar
   -->
   <ul v-if="paginasTotal > 1">
-    <li v-for="pagina in paginasTotal" :key="pagina">
+      <!-- paginas dentro da array em si -->
+      <!-- <router-link :to="{query: query(paginas)}">Primeira página</router-link> -->
+    <li v-for="pagina in paginas" :key="pagina">
       <router-link :to="{query: query(pagina)}">{{pagina}}</router-link>
     </li>
+     <!-- <router-link :to="{query: query(paginasTotal)}">Última página</router-link> -->
   </ul>
 </template>
 
@@ -32,6 +35,30 @@ export default {
     },
   },
   computed: {
+    // paginas sempre irá retornar uma array com o número de itens (páginas que for determinado)
+    // primeiro devo saber em que página a pessoa está, e a quantidade de páginas que eu quero mostra pra frente
+    paginas() {
+      // página atual
+      const current = Number(this.$route.query._page);
+    //  numero de paginas estipulada 
+      const range = 9;
+      const offset = Math.ceil(range / 2);
+      const total = this.paginasTotal;
+      // array final
+      const pagesArray = [];
+      // array do total de páginas obtidas
+      for (let i = 1; i <= total; i++) {
+        pagesArray.push(i);
+        console.log(pagesArray);
+      }
+      // função para remover item da Arrays
+      // usa dois argumentos. a partir de que ponto começa a tirar item da array e até em que ponto
+      pagesArray.splice(0, current - offset);
+      // array com os número de páginas já delimitados
+      pagesArray.splice(range, total);
+
+      return pagesArray;
+    },
     paginasTotal() {
       const total = this.produtosTotal / this.produtosPorPagina;
       return total !== Infinity ? Math.ceil(total) : 0;
