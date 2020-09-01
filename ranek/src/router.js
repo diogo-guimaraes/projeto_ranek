@@ -4,6 +4,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
+// import rota pra página de produto
+import Produto from "./views/Produto.vue";
 
 Vue.use(Router);
 
@@ -15,7 +17,14 @@ export default new Router({
       path: "/",
       name: "home",
       component: Home,
-    },   
+    },
+    {
+      // add rota pra página de produto
+      path: "/produto/:id",
+      name: "produto",
+      component: Produto,
+      props: true
+    }   
   ],
   // função para subir a tela de forma suave 
   scrollBehavior() {
