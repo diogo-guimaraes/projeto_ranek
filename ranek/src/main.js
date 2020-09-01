@@ -1,7 +1,7 @@
 
-// refactor(compoments): ProdutosLista
-// add(compoments): ProdutosLista
-// rm(compoments): ProdutosLista
+// refactor: main
+// add: main
+// rm: main
  
 import Vue from "vue";
 import App from "./App.vue";
