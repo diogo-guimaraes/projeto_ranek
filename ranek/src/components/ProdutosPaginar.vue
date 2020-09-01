@@ -48,8 +48,7 @@ export default {
       const pagesArray = [];
       // array do total de páginas obtidas
       for (let i = 1; i <= total; i++) {
-        pagesArray.push(i);
-        console.log(pagesArray);
+        pagesArray.push(i);       
       }
       // função para remover item da Arrays
       // usa dois argumentos. a partir de que ponto começa a tirar item da array e até em que ponto
