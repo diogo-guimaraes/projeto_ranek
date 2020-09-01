@@ -8,7 +8,8 @@
     <transition mode="out-in">  
     <div v-if="produtos && produtos.length" class="produtos" key="produtos">
       <div class="produto" v-for="(produto, index) in produtos" :key="index">
-        <router-link to="/">
+        <!-- aponta a rota para produto com parametro da props id: informando que id está em produto -->
+        <router-link :to="{name: 'produto', params: {id: produto.id}}">
           <img v-if="produto.fotos" :src="produto.fotos[0].src" :alt="produto.fotos[0].titulo" />
           <p class="preco">{{produto.preco}}</p>
           <h2 class="titulo">{{produto.nome}}</h2>
