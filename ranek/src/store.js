@@ -24,5 +24,15 @@ export default new Vuex.Store({
       estado: ""
     }
   },
-  
+  // muda o valor de usuário
+  // passando dois arguementos, state para ter acesso aos 
+  // atributos e payload que vai mandar as informações que for feito um commit na mutação
+  mutations: {
+    UPDATE_LOGIN(state, payload) {
+      state.login = payload;
+    },
+    UPDATE_USUARIO(state, payload) {
+      state.usuario = payload;
+    }
+  },
 });
