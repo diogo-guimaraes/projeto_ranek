@@ -35,4 +35,13 @@ export default new Vuex.Store({
       state.usuario = payload;
     }
   },
+  // add ação para pegar um usuario
+  actions: {
+    getUsuario(context, payload) {
+      api.get(`/usuario/${payload}`).then(response => {
+        context.commit("UPDATE_USUARIO", response.data);
+        context.commit("UPDATE_LOGIN", true);
+      });
+    }
+  }
 });
