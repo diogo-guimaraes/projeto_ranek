@@ -37,7 +37,13 @@ import LoginCriar from "@/components/LoginCriar.vue";
       }
     };
   },
+  methods: {
+    logar() {
+      this.$store.dispatch("getUsuario", this.login.email);
+      this.$router.push({ name: "usuario" });
+    }
   }
+  };
 </script>
 
 <style scoped>
