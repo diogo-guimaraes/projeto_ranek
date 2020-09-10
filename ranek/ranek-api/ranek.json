@@ -10,6 +10,17 @@
       "numero": "25",
       "estado": "RJ",
       "cidade": "Rio de Janeiro"
+    },
+    {
+      "id": "diogo@gmail.com",
+      "email": "diogo@gmail.com",
+      "nome": "Diogo Guimarães",
+      "senha": "123",
+      "rua": "Rua Ali",
+      "cep": "12345678",
+      "numero": "25",
+      "estado": "RJ",
+      "cidade": "Rio"
     }
   ],
   "produto": [
