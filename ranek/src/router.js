@@ -7,6 +7,7 @@ import Home from "./views/Home.vue";
 // import rota pra página de produto
 import Produto from "./views/Produto.vue";
 import Login from "./views/Login.vue";
+import Usuario from "./views/usuario/Usuario.vue";
 
 Vue.use(Router);
 
@@ -30,6 +31,11 @@ export default new Router({
       path: "/login",
       name: "login",
       component: Login,
+    },
+    {
+      path: "/usuario",
+      name: "usuario",
+      component: Usuario
     }
   ],
   // função para subir a tela de forma suave 
