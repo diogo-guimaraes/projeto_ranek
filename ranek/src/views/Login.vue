@@ -1,8 +1,8 @@
 <template>
   <!-- 
-    refactor(compoments): ProdutosLista
-    add(compoments): ProdutosLista
-    rm(compoments): ProdutosLista
+    refactor(view): Login
+    add(view): Login
+    rm(view): Login
   -->
   <section class="login">
     <h1>Login</h1>
@@ -40,6 +40,7 @@ import LoginCriar from "@/components/LoginCriar.vue";
   methods: {
     logar() {
       this.$store.dispatch("getUsuario", this.login.email);
+      
       this.$router.push({ name: "usuario" });
     }
   }
