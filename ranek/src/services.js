@@ -2,6 +2,7 @@
 // add(src): services
 // rm(src): services
 
+// aqui basicamente ficam os servicos externos
 import axios from "axios";
 
 const axiosInstance = axios.create({
@@ -16,3 +17,8 @@ export const api = {
     return axiosInstance.post(endpoint, body);
   },
 };
+
+// faz axios na api via cep
+export function getCep(cep) {
+  return axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+}
