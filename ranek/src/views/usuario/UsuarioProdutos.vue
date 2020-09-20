@@ -4,12 +4,26 @@
     add(view): UsuarioProdutos
     rm(view): UsuarioProdutos
   -->
-  <p>Lista de Produtos</p>
+  <section>
+    <h2>Adicionar Produto</h2>
+    <ProdutoAdicionar/>
+    <h2>Seus Produtos</h2>
+    
+  </section>
 </template>
 
 <script>
-export default {};
+import ProdutoAdicionar from "@/components/ProdutoAdicionar.vue";
+export default {
+   name: "UsuarioProdutos",
+   components: {
+    ProdutoAdicionar,   
+  },
+};
 </script>
 
-<style>
+<style scoped>
+h2 {
+  margin-bottom: 20px;
+}
 </style>
