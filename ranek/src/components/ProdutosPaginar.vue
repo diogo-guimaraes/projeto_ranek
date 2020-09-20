@@ -66,7 +66,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 ul {
   grid-column: 1 / -1;
 }
