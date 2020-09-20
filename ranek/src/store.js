@@ -23,7 +23,8 @@ export default new Vuex.Store({
       bairro: "",
       cidade: "",
       estado: ""
-    }
+    },
+    usuario_produtos: null
   },
   // muda o valor de usuário
   // passando dois arguementos, state para ter acesso aos 
@@ -34,6 +35,12 @@ export default new Vuex.Store({
     },
     UPDATE_USUARIO(state, payload) {
       state.usuario = Object.assign(state.usuario, payload);
+    },
+    UPDATE_USUARIO_PRODUTOS(state, payload) {
+      state.usuario_produtos = payload;
+    },
+    ADD_USUARIO_PRODUTOS(state, payload) {
+      state.usuario_produtos.unshit(payload);
     }
   },
   // add ação para pegar um usuario
@@ -65,5 +72,5 @@ export default new Vuex.Store({
       });
       context.commit("UPDATE_LOGIN", false);
     }
- } 
+  }
 });
