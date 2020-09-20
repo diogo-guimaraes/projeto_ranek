@@ -12,15 +12,75 @@
       "cidade": "Rio de Janeiro"
     },
     {
-      "id": "diogo@gmail.com",
-      "email": "diogo@gmail.com",
-      "nome": "Diogo Guimarães",
+      "id": "joao@origamid.com",
+      "email": "joao@origamid.com",
+      "nome": "João Marcos",
       "senha": "123",
-      "rua": "Rua Ali",
+      "rua": "Rua Ali Perto",
       "cep": "12345678",
       "numero": "25",
       "estado": "RJ",
-      "cidade": "Rio"
+      "cidade": "Rio de Janeiro"
+    },
+    {
+      "id": "maria@origamid.com",
+      "nome": "Maria das Neves",
+      "email": "maria@origamid.com",
+      "senha": "123",
+      "cep": "22640-102",
+      "rua": "Avenida das Américas",
+      "numero": "100",
+      "bairro": "Barra da Tijuca",
+      "cidade": "Rio de Janeiro",
+      "estado": "RJ"
+    },
+    {
+      "id": "mariana@origamid.com",
+      "nome": "Mariana",
+      "email": "mariana@origamid.com",
+      "senha": "123",
+      "cep": "22640-102",
+      "rua": "Avenida das Américas",
+      "numero": "100",
+      "bairro": "Barra da Tijuca",
+      "cidade": "Rio de Janeiro",
+      "estado": "RJ"
+    },
+    {
+      "id": "deise@gmail.com",
+      "nome": "Diogo",
+      "email": "deise@gmail.com",
+      "senha": "147",
+      "cep": "76820608",
+      "rua": "Rua Jobu Miró",
+      "numero": "852",
+      "bairro": "Flodoaldo Pontes Pinto",
+      "cidade": "Porto Velho",
+      "estado": "RO"
+    },
+    {
+      "id": "d@d",
+      "nome": "D@f",
+      "email": "d@d",
+      "senha": "123",
+      "cep": "76820608",
+      "rua": "Rua Jobu Miró",
+      "numero": "852",
+      "bairro": "Flodoaldo Pontes Pinto",
+      "cidade": "Porto Velho",
+      "estado": "RO"
+    },
+    {
+      "id": "a@a",
+      "nome": "d",
+      "email": "a@a",
+      "senha": "123",
+      "cep": "76820608",
+      "rua": "Rua Jobu Miró",
+      "numero": "123",
+      "bairro": "Flodoaldo Pontes Pinto",
+      "cidade": "Porto Velho",
+      "estado": "RO"
     }
   ],
   "produto": [
