@@ -30,6 +30,17 @@ export default {
       }
     };
   },
+  methods: {
+    formatarProduto() {
+      this.produto.usuario_id = this.$store.state.usuario.id;
+    },
+    adicionarProduto() {
+      this.formatarProduto();
+      api.post("/produto", this.produto).then(() => {
+        this.$store.dispatch("getUsuarioProdutos");
+      });
+    }
+  }
 };
 </script>
 
