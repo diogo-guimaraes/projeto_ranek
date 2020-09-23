@@ -19,7 +19,17 @@
 
 <script>
 export default {
-  name: "ProdutoAdicionar"
+  name: "ProdutoAdicionar",
+  data() {
+    return {
+      produto: {
+        nome: "",
+        preco: "",
+        descricao: "",
+        fotos: null
+      }
+    };
+  },
 };
 </script>
 
