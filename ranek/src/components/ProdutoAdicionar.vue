@@ -31,6 +31,7 @@ export default {
     };
   },
   methods: {
+    // formata prduto antes de enviar para a api
     formatarProduto() {
       this.produto.usuario_id = this.$store.state.usuario.id;
     },
