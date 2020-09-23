@@ -18,6 +18,9 @@
 </template>
 
 <script>
+
+import { api } from "@/services.js";
+ 
 export default {
   name: "ProdutoAdicionar",
   data() {
