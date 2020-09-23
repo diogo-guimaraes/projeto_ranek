@@ -38,13 +38,13 @@ export default {
   data() {
     return {
       produtos: null,
-      produtosPorPagina: 9,
+      produtosPorPagina: 4,
       produtosTotal: 0,
     };
   },
 
   computed: {
-    // retrna os dados serializado na funlção  serialize em helpers retornando na rota  de busca o valor da url e adiciona paginete aponstado em produtosPorPagina
+    // retrna os dados serializado na função  serialize em helpers retornando na rota  de busca o valor da url e adiciona paginete apresentando em produtosPorPagina
     url() {
       const query = serialize(this.$route.query);
       return `/produto?_limit=${this.produtosPorPagina}${query}`;
