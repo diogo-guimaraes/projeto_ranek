@@ -32,6 +32,7 @@ export default {
   methods: {
     async criarUsuario() {
       try {
+        // await this.$store.dispatch("criarUsuario", this.$store.state.usuario, await "getUsuario", this.$store.state.email);
         await this.$store.dispatch("criarUsuario", this.$store.state.usuario);
         await this.$store.dispatch(
           "getUsuario",
