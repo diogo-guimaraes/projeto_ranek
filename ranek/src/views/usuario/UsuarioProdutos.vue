@@ -14,6 +14,7 @@
          <!-- declara a propriedade para ser estilizada -->
         <ProdutoItem :produto="produto">
           <p>{{produto.descricao}}</p>
+            <button class="deletar" @click="deletarProduto(produto.id)">Deletar</button>
         </ProdutoItem>
       </li>
      </transition-group>
