@@ -4,11 +4,22 @@
     add(view): UsuarioEditar
     rm(view): UsuarioEditar
   -->
-  <p>Lista de Editar</p>
+  <section>
+    <UsuarioForm>
+      <button class="btn" @click.prevent="atualizarUsuario">Atualizar Usuário</button>
+    </UsuarioForm>
+  </section>
 </template>
 
 <script>
-export default {};
+import UsuarioForm from "@/components/UsuarioForm.vue";
+import { api } from "@/services.js";
+export default {
+  name: "UsuarioEditar",
+  components: {
+    UsuarioForm
+  },
+};
 </script>
 
 <style>
