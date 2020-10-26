@@ -23,7 +23,7 @@ export default {
     atualizarUsuario() {
       api
         .put(
-          `/usuario/${this.$store.state.usuario.id}`,
+          '/usuario',
           this.$store.state.usuario
         )
         .then(() => {
