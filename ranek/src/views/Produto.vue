@@ -24,6 +24,7 @@
         <button class="btn" v-if="!finalizar" @click="finalizar = true">Comprar</button>
         <FinalizarCompra v-else :produto="produto"/>
          </transition>
+         <button v-else class="btn btn-disabled" disabled>Produto Vendido</button>
       </div>
     </div>
     <PaginaCarregando v-else/>
@@ -76,8 +77,23 @@
   margin-bottom: 40px;
 }
 
+.fotos {
+  grid-row: 1 / 3;
+}
+
+.info {
+  position: sticky;
+  top: 20px;
+}
+
 .descricao {
   font-size: 1.2rem;
+}
+
+img {
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(30, 60, 90, 0.2);
+  border-radius: 4px;
 }
 
 .btn {
