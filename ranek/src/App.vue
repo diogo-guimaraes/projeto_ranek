@@ -31,7 +31,7 @@ export default {
         .then(() => {
           this.$store.dispatch("getUsuario");
         })
-        .catch(error => {
+        .catch(() => {
           window.localStorage.removeItem("token");
         });
     }
