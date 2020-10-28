@@ -10,7 +10,7 @@
     <label for="preco">Preço (R$)</label>
     <input id="preco" name="preco" type="number" v-model="produto.preco">
     <label for="fotos">Fotos</label>
-    <input id="fotos" name="fotos" type="file" ref="fotos">
+    <input id="fotos" name="fotos" type="file" multiple ref="fotos">
     <label for="preco">Descrição</label>
     <textarea id="preco" name="preco" v-model="produto.descricao"></textarea>
     <input class="btn" type="button" value="Adicionar Produto" @click.prevent="adicionarProduto">
@@ -54,8 +54,8 @@ export default {
       return form;
     },
     adicionarProduto() {
-      this.formatarProduto();
-      api.post("/produto", this.produto).then(() => {
+      const produto = this.formatarProduto();
+      api.post("/produto", produto).then(() => {
         this.$store.dispatch("getUsuarioProdutos");
       });
     }
