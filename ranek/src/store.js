@@ -46,9 +46,9 @@ export default new Vuex.Store({
   // add ação para pegar um usuario
   actions: {
     getUsuarioProdutos(context) {
-      api
-          // o id é passado pelo context
-          // a ação puxa pelo id registrado no login
+        // o id é passado pelo context
+        // a ação puxa pelo id registrado no login
+        return api
         .get(`/produto?usuario_id=${context.state.usuario.id}`)
         .then(response => {
           context.commit("UPDATE_USUARIO_PRODUTOS", response.data);
