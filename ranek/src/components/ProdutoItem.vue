@@ -8,7 +8,6 @@
     <router-link class="produto-img" :to="{name: 'produto', params: {id: produto.id}}">
       <!-- se produto.fotos existir traz mostra a foto passando posilçao [0] porque é o primeira chave no array -->
       <img v-if="produto.fotos" :src="produto.fotos[0].src" :alt="produto.fotos[0].titulo">
-      <p>Ver Produto</p>
     </router-link>
     <div class="info">
       <!-- passa o preco atraves do filtro numeroPreco que está declarado gobalmente -->
