@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       produtos: null,
-      produtosPorPagina: 4,
+      produtosPorPagina: 9,
       produtosTotal: 0,
     };
   },
