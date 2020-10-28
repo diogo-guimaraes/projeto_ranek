@@ -1,6 +1,6 @@
-// refactor:router
-// add:router
-// rm:router
+// refactor(src):router
+// add(src):router
+// rm(src):router
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
@@ -15,7 +15,7 @@ import UsuarioEditar from "./views/usuario/UsuarioEditar.vue";
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
@@ -39,6 +39,9 @@ export default new Router({
     {
       path: "/usuario",
       component: Usuario,
+      meta: {
+        login: true
+      },
       children: [
         {
           path: "",
@@ -68,3 +71,17 @@ export default new Router({
     return window.scrollTo({ top: 0, behavior: "smooth" });
   }
 });
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.login)) {
+    if (!window.localStorage.token) {
+      next("/login");
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
+});
+
+export default router;
