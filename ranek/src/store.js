@@ -73,7 +73,6 @@ export default new Vuex.Store({
           password: payload.senha
         })
         .then(response => {
-          console.log(response)
           window.localStorage.token = `Bearer ${response.data.token}`;
         });
     },
