@@ -34,10 +34,8 @@ export default {
       try {
         // await this.$store.dispatch("criarUsuario", this.$store.state.usuario, await "getUsuario", this.$store.state.email);
         await this.$store.dispatch("criarUsuario", this.$store.state.usuario);
-        await this.$store.dispatch(
-          "getUsuario",
-          this.$store.state.usuario.email
-        );
+        await this.$store.dispatch("logarUsuario", this.$store.state.usuario);
+        await this.$store.dispatch("getUsuario");
         this.$router.push({ name: "usuario" });
       } catch (error) {
         console.log(error);
